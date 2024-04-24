@@ -1,0 +1,85 @@
+﻿@page
+@model example.Pages.bookingparisflightModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            color: #AD88C6;
+            
+            text-align: center;
+        }
+
+        form {
+            margin: 20px auto;
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+            input[type="submit"]:hover {
+                background-color: #555;
+            }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Flight Booking</h1>
+    </header>
+
+    <form action="#" method="post">
+        <label for="departure">Departure:</label>
+        <input type="text" id="departure" name="departure" required>
+
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" required>
+
+        <label for="date">Date of Travel:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="passengers">Number of Passengers:</label>
+        <select id="passengers" name="passengers" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <input type="submit" value="Book Flight">
+    </form>
+
+</body>
+</html>
+

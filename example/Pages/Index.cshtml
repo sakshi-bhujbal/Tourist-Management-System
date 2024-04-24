@@ -1,0 +1,297 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+
+
+
+<body>
+<div class="text-center">
+    <h1 class="display-4">Welcome To VoyageVista</h1>
+        <p style="font-size:18px ;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"> We are here to turn your dream Destination into reality </p>
+    <div class="row">
+        
+     
+         <p style="font-size:25px">
+        Welcome to VoyageVista, your passport to unforgettable adventures and cherished memories!<br>
+
+        Embark on a journey of discovery with us as we unveil the wonders of the world waiting to be explored. Whether you crave the bustling energy of vibrant cities, the serene tranquility of nature's embrace, or the rich tapestry of cultural heritage, we have the perfect destination for you.
+
+        Indulge your wanderlust and immerse yourself in breathtaking landscapes, fascinating history, and diverse cultures. Our curated selection of destinations promises to ignite your sense of adventure and leave you spellbound.
+
+        Join us as we traverse continents, unlocking the hidden gems and must-see landmarks that make each place unique. Whether you're a seasoned traveler or a first-time explorer, we're here to inspire, guide, and make your dream vacation a reality.
+
+        So, pack your bags and get ready to embark on an extraordinary journey with us. Your adventure starts here at VoyageVista. Welcome aboard!"
+    </p>
+    
+    <div class="col-sm-6">
+            
+    </div>
+    </div>
+    </div>
+
+
+
+    
+    <style>
+    .container {
+    position: relative;
+    text-align: center;
+    color: black;
+    }
+    .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    
+    
+body
+        {
+            background-image: url('https://img.freepik.com/premium-photo/soft-pastel-colors-blend-tranquil-sunset-clear-sky-generated-by-ai_188544-53142.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+
+}
+
+.japan{
+            display: block;
+            margin-left: 0;
+            margin-right: 200px;
+            
+}
+
+        .paris {
+            display: block;
+            margin-right: 0;
+        
+        }
+
+        .switzerland {
+            display: block;
+            
+            margin-right: 0;
+        }
+
+        figcaption{
+            font-style:normal;
+            padding: 2px;
+            text-align:center;
+            font-size:30px;
+        }
+
+</style>
+
+    <div class="row">
+        <div class="col-4 d-flex text-center ">
+            <a asp-page="/MainJapan" style="text-decoration:none">
+             <figure>
+            <img class="japan" src="https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg" height="400" width="420"><br>
+            <figcaption>Japan</figcaption>
+            </figure>
+            </a>
+            
+        </div>
+        <div class="col-4 d-flex text-center">
+            <a asp-page="/MainParis" style="text-decoration:none">
+            <figure>
+            <img class="paris" src="https://www.visa.co.in/dam/VCOM/regional/ap/images/travel-with-visa/paris/marquee-travel-paris-800x450.jpg" height="400" width="420"><br>
+                <figcaption>Paris</figcaption>
+            </figure>
+            </a>
+        </div>
+        <div class="col-4 d-flex text-center">
+            <a asp-page="/MainSwitzerland" style="text-decoration:none">
+            <figure>
+                <img class="switzerland" src="https://theplanetd.com/images/best-cities-in-switzerland.jpg" height="400" width="420">
+                <br>
+                <figcaption>Switzerland</figcaption>
+            </figure>
+            </a>
+        </div>
+    </div>
+
+
+
+
+    <style>
+        .container {
+            position: relative;
+            text-align: center;
+            color: black;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .amritsar {
+            display: block;
+            margin-left: 0;
+            margin-right: 200px;
+        }
+
+        .italy {
+            display: block;
+            margin-right: 0;
+        }
+
+        .bali {
+            display: block;
+            margin-right: 0;
+        }
+
+        figcaption {
+            font-style: normal;
+            padding: 2px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .feature-1
+        {
+            padding: 30px;
+            background: rgba(90, 9, 190,0.05);
+            border-radius: 20px;
+            min-height: calc(50% - 15px);
+            top: 0;
+            margin-bottom: 30px !important;
+        
+        }
+
+    </style>
+
+    <div class="row">
+        <div class="col-4 d-flex text-center">
+            <a asp-page="/MainAmritsar" style="text-decoration:none">
+                <figure>
+                    <img class="amritsar" src="https://vl-prod-static.b-cdn.net/system/images/000/645/175/394d8d0bebd558269e2e5db14a666eec/original/GettyImages-142737748-5af5332a642dca0037b452da.jpeg?1678178804" height="400" width="420">
+                    <br>
+                    <figcaption>Amritsar</figcaption>
+                </figure>
+            </a>
+
+        </div>
+        <div class="col-4 d-flex text-center">
+            <a asp-page="/MainItaly" style="text-decoration:none">
+            <figure>
+                <img class="italy" src="https://www.adventurouskate.com/wp-content/uploads/2023/06/Padova-Cities-in-Italy-scaled.jpg" height="400" width="420">
+                <br>
+                <figcaption>Italy</figcaption>
+            </figure>
+            </a>
+        </div>
+        <div class="col-4 d-flex ext-center">
+            <a asp-page="/MainBali" style="text-decoration:none">
+            <figure>
+                <img class="bali" src="https://www.holidify.com/images/bgImages/BALI.jpg" height="400" width="420">
+                <br>
+                <figcaption>Bali</figcaption>
+            </figure>
+            </a>
+        </div>
+    </div>
+
+    <br />
+    <br />
+    <hr style="border-width:3px;border-style:inset;border-color:lightslategrey" />
+    <br />
+
+
+    <div class="container">
+			<div class="row mb-5 justify-content-center">
+				<div class="col-lg-6 text-center">
+					<h2 class="section-title text-center mb-3">Our Services</h2>
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                <hr style="width:20% ;text-align:center;margin-left:240px;height:5px" />
+
+            </div>
+			</div>
+            
+			<div class="row align-items-stretch">
+				<div class="col-lg-2 order-lg-1">
+                
+				</div>
+                
+                <br />
+                <br />
+
+				<div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1">
+
+					<div class="feature-1 d-md-flex">
+						<div class="align-self-center">
+							<span class="flaticon-house display-4 text-primary"></span>
+                        <img src="https://cdn-icons-png.flaticon.com/128/2913/2913092.png" height="60px" />
+                        <br />
+                        <br />
+                            <h3>Tour Packages</h3>
+                        <p class="mb-0">Explore our carefully crafted tour packages designed to immerse you in the culture, history, and natural beauty of each destination. From city tours to outdoor adventures, we offer a variety of options to suit every traveler's preferences. </p>
+						</div>
+					</div>
+                    
+                    
+
+
+					<div class="feature-1 ">
+						<div class="align-self-center">
+							<span class="flaticon-restaurant display-4 text-primary"></span>
+                        <img src="https://cdn-icons-png.flaticon.com/128/1020/1020295.png" height="60px" />
+                        <br />
+                        <br />
+							<h3>Guided Tours</h3>
+                        <p class="mb-0">Enhance your travel experience with our knowledgeable guides who will lead you through iconic landmarks, hidden gems, and local secrets. Our guided tours offer insights and stories that bring destinations to life.</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-3">
+
+					<div class="feature-1 d-md-flex">
+						<div class="align-self-center">
+							<span class="flaticon-mail display-4 text-primary"></span>
+                        <img src="https://cdn-icons-png.flaticon.com/128/9374/9374883.png" height="60px" />
+                        <br />
+                        <br />
+							<h3>Easy to Connect</h3>
+                        <p class="mb-0">Ready to start planning your next adventure? Get in touch with us today to learn more about our services, book your travel experiences, or request a customized itinerary. Our team looks forward to assisting you in creating unforgettable memories!.</p>
+						</div>
+					</div>
+                   
+
+
+					<div class="feature-1 d-md-flex">
+						<div class="align-self-center">
+							<span class="flaticon-phone-call display-4 text-primary"></span>
+                        <img src="https://cdn-icons-png.flaticon.com/128/9759/9759919.png" height="60px" />
+                        <br />
+                        <br />
+							<h3>24/7 Support</h3>
+                        <p class="mb-0">Enjoy round-the-clock support from our dedicated customer service team. Whether you have questions, need assistance, or encounter any issues during your trip, we're here to help every step of the way.</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+    
+
+
+</body>
+
+
+
+
+
+        
+
+

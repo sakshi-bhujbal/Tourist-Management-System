@@ -1,0 +1,131 @@
+﻿@page
+@model example.Pages.loginModel
+@{
+    ViewData["Title"] = "login";
+}
+
+<head>
+    <script type="text/javascript">
+        function formvalidate(thisform) {
+            var email = thisform.email.value;
+            var password = thisform.password.value;
+            if (email == null || email == "") {
+                alert("Please enter your Email!");
+                thisform.email.focus(); // Change this line
+                return false;
+            }
+            else if (email.length < 6) {
+                alert("Email must contain at least 6 characters!");
+                thisform.email.focus(); // Change this line
+                return false;
+            }
+            else if (password == null || password == "") {
+                alert("Please enter your password!");
+                thisform.password.focus(); // Change this line
+                return false;
+            }
+            else if (password.length < 6) {
+                alert("Password must contain at least 6 characters!");
+                thisform.password.focus(); // Change this line
+                return false;
+            }
+            else {
+                alert("Login Successful!");
+                return true;
+            }
+        }
+    </script>
+
+
+    <style>
+        h1 {
+            color: #7469B6;
+            padding-top: 30px;
+        }
+
+        input[type=submit] {
+            background-color: #AD88C6;
+            color: ghostwhite;
+            border-radius: 5px;
+            border: 0px;
+            height: 35px;
+            width: 180px;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+            input[type=submit]:hover {
+                background-color: #E1AFD1;
+                border: 0px;
+                color: ghostwhite;
+            }
+
+        .fcontrol {
+            border-radius: 2px;
+            border-style: none;
+            border-bottom: 1px black solid;
+            margin-left: 40px;
+            padding: 10px;
+        }
+
+        input[type=email]:focus, input[type=password]:focus {
+            border: 1px gray solid;
+        }
+
+        label {
+            margin-left: 35px;
+            width: 100px;
+            font-size: large;
+        }
+
+        body {
+            background-color: grey;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/009/388/131/original/world-map-isolated-on-a-white-background-flat-earth-gray-map-template-for-a-website-template-anal-report-infographics-the-globe-is-a-similar-world-map-icon-travel-around-the-world-vector.jpg');
+            font-family: 'Times New Roman', Times, serif;
+            background-size: cover;
+        }
+
+        .card {
+            height: 400px;
+            width: 550px;
+            border-radius: 20px;
+            margin: 0%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            margin-bottom: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 3px 5px 10px rgb(73, 73, 73);
+        }
+
+    </style>
+
+</head>
+
+<body>
+    
+    <div class="container-fluid">
+        
+        <div class="card border-dark">
+            <form method="post" onsubmit="return formvalidate(this)">
+                <center>
+                    <p><h1>Login</h1></p>
+                </center>
+
+                <label style="color:#7469B6"><br><b>E-mail:</b><sup>*</sup> </label>
+                <input type="email" class="fcontrol" placeholder="Registered e-mail" name="email"> <br>
+
+
+                <label style="color:#7469B6"><br><b> Password:<sup>*</sup></b></label>
+                <input type="password" class="fcontrol" placeholder="Enter strong password" name="password"> <br>
+
+                <br><center><input type="submit" class="button" name="submit" value="Log in"></center><br>
+                
+                <center><p>Not a member? <a asp-page="/Registration">Register</a></p></center>
+            </form>
+        </div>
+
+    </div>
+</body>

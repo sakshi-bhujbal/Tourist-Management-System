@@ -1,0 +1,84 @@
+﻿@page
+@model example.Pages.searchModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Search Results</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+
+        .flight-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .flight-info h3 {
+            margin-top: 0;
+        }
+
+        .flight-info p {
+            margin: 5px 0;
+        }
+
+        .flight-info .departure,
+        .flight-info .destination,
+        .flight-info .date,
+        .flight-info .price {
+            font-weight: bold;
+        }
+
+        .book-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .book-button:hover {
+                background-color: #0056b3;
+            }
+
+
+
+    </style>
+
+    <header>
+        <h1>Flight Search Results</h1>
+    </header>
+
+    <main>
+        <section class="search-results">
+            <h2>Search Results</h2>
+            <div class="flight-card">
+                <h3>Flight 1</h3>
+                <p>From: Mumbai</p>
+                <p>To: Pune</p>
+                <p>Departure Date: 10/12/2024</p>
+                <p>Price: $20</p>
+                <button class="book-button">Book Now</button>
+            </div>
+            <br />
+            <br />
+            <div class="flight-card">
+                <h3>Flight 2</h3>
+                <p>From: Origin Airport</p>
+                <p>To: Destination Airport</p>
+                <p>Departure Date: MM/DD/YYYY</p>
+                <p>Price: $XXX</p>
+                <button class="book-button">Book Now</button>
+            </div>
+     </section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+﻿@page
+@model example.Pages.bookingjapanflightModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<br />
+<br />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://t4.ftcdn.net/jpg/03/91/32/79/360_F_391327998_cbDsBCXnaKReISNCN0DMXPZADAPH8eia.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+
+
+        form {
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: rgba(90, 9, 190,0.05);
+            max-width: 600px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+            input[type="submit"]:hover {
+                background-color: #555;
+            }
+    </style>
+
+    <script type="text/javascript">
+        function formvalidate(thisform) {
+            if (email == null || email == "") {
+                alert("Please enter your Email!");
+                thisform.value.focus();
+                return false;
+            }
+            else {
+                alert("Booking Succesfull!");
+            }
+            return true;
+        }
+    </script>
+
+    <script type="text/javascript">
+        function formvalidate(thisform) {
+            alert("Booking Succesfull!");
+        }
+    </script>
+
+</head>
+<body>
+
+
+    <h1 style="text-align:center;color: #AD88C6">Flight Booking</h1>
+
+    <br />
+    <br />
+
+    <form method="post" onsubmit="return formvalidate(this)">
+        <label for="departure">Departure:</label>
+        <input type="text" id="departure" name="departure" required>
+
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" required>
+
+        <label for="date">Date of Travel:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="passengers">Number of Passengers:</label>
+        <select id="passengers" name="passengers" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <input type="submit" asp-page-handler="Submit" value="Submit" name="submit" value="Book Flight">
+    </form>
+
+</body>
+</html>
+

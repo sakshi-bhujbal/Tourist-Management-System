@@ -1,0 +1,114 @@
+﻿@page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .flight-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+            .flight-card img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-bottom: 2px solid #eee;
+            }
+
+        .flight-details {
+            padding: 20px;
+        }
+
+            .flight-details h2 {
+                margin: 0;
+                font-size: 1.5rem;
+            }
+
+            .flight-details p {
+                margin: 10px 0;
+                font-size: 1.1rem;
+            }
+
+            .flight-details button {
+                padding: 10px 20px;
+                background-color: #ffff;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+                .flight-details button:hover {
+                    background-color: #FFEFEF;
+                }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="background-color:#AD88C6">&nbsp Explore Flights</h1>
+    </header>
+
+    <div class="container">
+        <div class="flight-card">
+            <img src="https://miro.medium.com/v2/resize:fit:505/1*DbcauJB8VYQAIbZhkWDpvg.jpeg" alt="Flight to Bali">
+            <div class="flight-details">
+                <h2>Flight to Bali</h2>
+                <p>From: Delhi</p>
+                <p>To: Bali</p>
+                <p>Date: May 15, 2024</p>
+                <p>Price: 55,000</p>
+                <button><a asp-page="/bookingbaliflight">Book Now</a></button>
+            </div>
+        </div>
+
+        <div class="flight-card">
+            <img src="https://images.news18.com/ibnlive/uploads/2023/02/untitled-1-620-16771435104x3.jpg" alt="Flight to Japan">
+            <div class="flight-details">
+                <h2>Flight to Japan</h2>
+                <p>From: Mumbai</p>
+                <p>To: Japan</p>
+                <p>Date: June 10, 2024</p>
+                <p>Price: 53,000</p>
+                <button><a asp-page="/bookingjapanflight">Book Now</a></button>
+            </div>
+        </div>
+
+        <div class="flight-card">
+            <img src="https://livefromalounge.boardingarea.com/wp-content/uploads/2018/04/Screen-Shot-2018-04-14-at-12.09.04-PM.png" alt="Flight to Italy">
+            <div class="flight-details">
+                <h2>Flight to Italy</h2>
+                <p>From: Pune</p>
+                <p>To: Italy</p>
+                <p>Date: July 5, 2024</p>
+                <p>Price: 60,000</p>
+                <button><a asp-page="/bookingitalyflight">Book Now</a></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
